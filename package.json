@@ -12,6 +12,7 @@
   "dependencies": {
     "adm-zip": "^0.4.7",
     "cordova": "^6.3.1",
+    "elementtree": "^0.1.6",
     "properties-parser": "^0.3.1"
   }
 }
