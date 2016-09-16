@@ -15,6 +15,7 @@
     "cordova-common": "^1.4.1",
     "elementtree": "^0.1.6",
     "properties-parser": "^0.3.1",
+    "q": "^1.4.1",
     "shelljs": "^0.7.4"
   }
 }
