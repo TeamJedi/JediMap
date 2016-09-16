@@ -5,7 +5,10 @@ all: android browser
 
 www: www/css/*.css www/img/*.png www/*.html www/js/*.js
 
-android: ./platforms/android/build/outputs/apk/android-armv7-debug.apk ./platforms/android/build/outputs/apk/android-x86-debug.apk ./platforms/android/build/outputs/apk/android-arm64-debug.apk ./platforms/android/build/outputs/apk/android-x86_64-debug.apk
+android: ./platforms/android/assets ./platforms/android/build/outputs/apk/android-armv7-debug.apk ./platforms/android/build/outputs/apk/android-x86-debug.apk ./platforms/android/build/outputs/apk/android-arm64-debug.apk ./platforms/android/build/outputs/apk/android-x86_64-debug.apk
+
+./platforms/android/assets:
+	mkdir -p platforms/android/assets
 
 browser: www
 	$(CORDOVA) build browser
