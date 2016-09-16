@@ -10,5 +10,5 @@ after_success:
 - echo 'Huzzah!'
 
 after_failure:
-- echo "Boo. SNAFU'
+- echo "Boo. SNAFU"
 
