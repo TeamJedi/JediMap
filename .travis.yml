@@ -2,6 +2,10 @@ language: android
 android:
   components:
     - android-23
+addons:
+  apt:
+    packages:
+    - jq
 
 before_install:
 - make
@@ -10,8 +14,8 @@ script:
 - make -C src android
 
 after_success:
-- echo 'Huzzah!'
+- ./scripts/zapier_zap.sh success
 
 after_failure:
-- echo "Boo. SNAFU"
+- ./scripts/zapier_zap.sh failure
 
