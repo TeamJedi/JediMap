@@ -1,4 +1,7 @@
 language: android
+android:
+  components:
+    - android-23
 
 before_install:
 - make
