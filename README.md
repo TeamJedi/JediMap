@@ -1,8 +1,8 @@
-# Jedi
+# JediMap
 
-This is the Jedi cordova app.
+This is the JediMap cordova app.
 
-All of the web content should be placed under the www/ folder. The build process will copy that for each target platform.
+All of the web content should be placed under the src/www/ folder. The build process will copy that for each target platform.
 
 To run this in a browser for local rapid iteration, use:
 
