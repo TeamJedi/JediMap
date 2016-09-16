@@ -1,5 +1,4 @@
-PATH:=$(PATH):../node_modules/.bin
-CORDOVA=PATH=$(PATH) cordova
+CORDOVA=PATH=../node_modules/.bin:$(PATH) cordova
 
 all: android browser
 
