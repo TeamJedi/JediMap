@@ -1,4 +1,14 @@
 language: android
 
+before_install:
+- make
+
 script:
 - make -C src android
+
+after_success:
+- echo 'Huzzah!'
+
+after_failure:
+- echo "Boo. SNAFU'
+
