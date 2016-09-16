@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.blenke.jedi.android" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.blenke.jedimap.android" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
@@ -17,7 +17,7 @@
     <description>
         A modern re-interpretation of the Jed set.
     </description>
-    <author email="jedi@blenke.com" href="http://ianblenke.github.io/jedi/">
+    <author email="jedi@blenke.com" href="http://teamjedi.github.io/">
         The Jedi Team
     </author>
     <content src="index.html" />
@@ -36,4 +36,5 @@
     <preference name="xwalkMode" value="embedded" />
     <preference name="xwalkMultipleApk" value="true" />
     <preference name="android-minSdkVersion" value="16" />
+    <preference name="xwalk64bit" value="xwalk64bit" />
 </widget>

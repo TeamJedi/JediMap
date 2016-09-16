@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.blenke.jedi.android;
+package com.blenke.jedimap.android;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
