@@ -13,7 +13,8 @@ browser: www
 	$(CORDOVA) build browser
 
 ./platforms/android/build/outputs/apk/android-armv7-debug.apk: www
-	echo $(PATH)
+	ls -la ../node_modules/.bin
+	$(CORDOVA) --version
 	$(CORDOVA) build android
 
 ./platforms/android/build/outputs/apk/android-x86-debug.apk: www
