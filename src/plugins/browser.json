@@ -15,11 +15,17 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.blenke.jedi.android"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.blenke.jedimap.android"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
             "PACKAGE_NAME": "com.blenke.jedi.android"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.blenke.jedimap.android"
         }
     }
 }
