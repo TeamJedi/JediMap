@@ -7,7 +7,6 @@
     <author email="jedi@blenke.com" href="http://teamjedi.github.io/">
         The Jedi Team
     </author>
-    <!--    <icon src="www/img/logo.png" width="170" height="200" /> -->
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
@@ -20,24 +19,12 @@
     <allow-intent href="geo:*" />
     <allow-intent href="*" />
     <platform name="android">
-      <allow-intent href="market:*" />
-      <!--
-      <icon src="res/drawable-ldpi/icon.png" density="ldpi" width="36" height="36" />
-      <icon src="res/drawable-mdpi/icon.png" density="mdpi" width="48" height="48" />
-      <icon src="res/drawable-hdpi/icon.png" density="hdpi" width="72" height="72" />
-      <icon src="res/drawable-xdpi/icon.png" density="xdpi" width="96" height="96" />
-      -->
+        <icon src="res/drawable-ldpi/icon.png" density="ldpi" width="36" height="36" />
+        <icon src="res/drawable-mdpi/icon.png" density="mdpi" width="48" height="48" />
+        <icon src="res/drawable-hdpi/icon.png" density="hdpi" width="72" height="72" />
+        <icon src="res/drawable-xdpi/icon.png" density="xdpi" width="96" height="96" />
+        <allow-intent href="market:*" />
     </platform>
-    <!--
-    <platform name="osx">
-      <icon src="platforms/osx/Jedi/Images.xcassets/AppIcon.appiconset/icon-16x16.png" width="16" height="16" />
-      <icon src="platforms/osx/Jedi/Images.xcassets/AppIcon.appiconset/icon-32x32.png" width="32" height="32" />
-      <icon src="platforms/osx/Jedi/Images.xcassets/AppIcon.appiconset/icon-64x64.png" width="64" height="64" />
-      <icon src="platforms/osx/Jedi/Images.xcassets/AppIcon.appiconset/icon-128x128.png" width="128" height="128" />
-      <icon src="platforms/osx/Jedi/Images.xcassets/AppIcon.appiconset/icon-256x256.png" width="256" height="256" />
-      <icon src="platforms/osx/Jedi/Images.xcassets/AppIcon.appiconset/icon-512x512.png" width="512" height="512" />
-    </platform>
-    -->
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
