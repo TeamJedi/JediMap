@@ -35,45 +35,61 @@ var app = {
     onDeviceReady: function() {
         console.log('onDeviceReady Begin');
         app.receivedEvent('deviceready');
+        // Cesium.BingMapsApi.defaultKey = '';
         var viewer = new Cesium.Viewer('cesiumContainer');
 
         var options = { timeout: 10000, enableHighAccuracy: true, maximumAge: 10000 };
         var watchID = navigator.geolocation.watchPosition(
           function(position) {
             // GeoLocationSuccess Event Handler
-            console.log('Latitude: '          + position.coords.latitude          + '\n' +
-                        'Longitude: '         + position.coords.longitude         + '\n' +
-                        'Altitude: '          + position.coords.altitude          + '\n' +
-                        'Accuracy: '          + position.coords.accuracy          + '\n' +
-                        'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-                        'Heading: '           + position.coords.heading           + '\n' +
-                        'Speed: '             + position.coords.speed             + '\n' +
-                        'Timestamp: '         + position.timestamp                + '\n');
+            //console.log('Latitude: '          + position.coords.latitude          + ', ' +
+            //            'Longitude: '         + position.coords.longitude         + ', ' +
+            //            'Altitude: '          + position.coords.altitude          + ', ' +
+            //            'Accuracy: '          + position.coords.accuracy          + ', ' +
+            //            'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + ', ' +
+            //            'Heading: '           + position.coords.heading           + ', ' +
+            //            'Speed: '             + position.coords.speed             + ', ' +
+            //            'Timestamp: '         + position.timestamp                + '\n');
+            if(viewer) {
+              viewer.camera.setView({
+                destination : Cesium.Cartesian3.fromDegrees(
+                  position.coords.longitude,
+                  position.coords.latitude,
+                  Cesium.Ellipsoid.WGS84.cartesianToCartographic(viewer.camera.position).height
+                )
+              });
+	    }
           },
-          function() {
+          function(error) {
             // GeoLocationError Event Handler
             console.log('code: '    + error.code    + '\n' +
                         'message: ' + error.message + '\n');
           },
           options);
 
-        // Android customization
-        cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
-        // Make background operation silent
-        cordova.plugins.backgroundMode.configure({
-          silent: true
-        });
-        // Enable background mode
-        cordova.plugins.backgroundMode.enable();
+	var md = cordova.require("cordova/plugin_list").metadata;
 
-        // Called when background mode has been activated
-        cordova.plugins.backgroundMode.onactivate = function () {
-            setTimeout(function () {
-                // Modify the currently displayed notification
-                cordova.plugins.backgroundMode.configure({
-                    text:'Running in background for more than 5s now.'
-                });
-            }, 5000);
+	console.log(JSON.stringify(md));
+
+	if("cordova-plugin-background-mode" in md) {
+          // Android customization
+          cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});
+          // Make background operation silent
+          cordova.plugins.backgroundMode.configure({
+            silent: true
+          });
+          // Enable background mode
+          cordova.plugins.backgroundMode.enable();
+
+          // Called when background mode has been activated
+          cordova.plugins.backgroundMode.onactivate = function () {
+              setTimeout(function () {
+                  // Modify the currently displayed notification
+                  cordova.plugins.backgroundMode.configure({
+                      text:'Running in background for more than 5s now.'
+                  });
+              }, 5000);
+          }
         }
 
         console.log('onDeviceReady End');
