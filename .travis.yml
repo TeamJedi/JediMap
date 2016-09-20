@@ -6,6 +6,7 @@ addons:
   apt:
     packages:
     - jq
+    - imagemagick
 
 before_install:
 - make
