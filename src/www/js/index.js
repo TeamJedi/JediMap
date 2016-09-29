@@ -71,6 +71,8 @@ var app = {
 
 	console.log(JSON.stringify(md));
 
+        //var ipfs = require('ipfs');
+
 	if("cordova-plugin-background-mode" in md) {
           // Android customization
           cordova.plugins.backgroundMode.setDefaults({ text:'Doing heavy tasks.'});

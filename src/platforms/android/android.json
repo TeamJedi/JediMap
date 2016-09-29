@@ -91,22 +91,22 @@
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.blenke.jedi.android"
+            "PACKAGE_NAME": "com.github.TeamJedi.JediMap.android"
         },
         "cordova-plugin-crosswalk-webview": {
-            "PACKAGE_NAME": "com.blenke.jedi.android"
+            "PACKAGE_NAME": "com.github.TeamJedi.JediMap.android"
         },
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.blenke.jedi.android"
+            "PACKAGE_NAME": "com.github.TeamJedi.JediMap.android"
         },
         "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.blenke.jedi.android"
+            "PACKAGE_NAME": "com.github.TeamJedi.JediMap.android"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.blenke.jedimap.android"
+            "PACKAGE_NAME": "com.github.TeamJedi.JediMap.android"
         },
         "cordova-plugin-background-mode": {
-            "PACKAGE_NAME": "com.blenke.jedimap.android"
+            "PACKAGE_NAME": "com.github.TeamJedi.JediMap.android"
         }
     },
     "dependent_plugins": {},
