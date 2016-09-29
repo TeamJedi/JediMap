@@ -46,4 +46,5 @@
     <preference name="xwalkMode" value="embedded" />
     <preference name="xwalkMultipleApk" value="true" />
     <preference name="android-minSdkVersion" value="16" />
+    <preference name="xwalk64bit" value="xwalk64bit" />
 </widget>
